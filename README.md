@@ -1,12 +1,13 @@
 # Credit Card Fraud Anomaly Detection
 
-This project demonstrates the application of anomaly detection techniques to identify fraudulent credit card transactions from a dataset containing over 28,000 rows and 31 columns. Anomaly detection is a crucial task in the realm of fraud prevention, where the goal is to identify unusual or unexpected patterns that deviate from the norm.
+This project demonstrates the application of anomaly detection techniques to identify fraudulent credit card transactions from a dataset containing over 280,000 rows and 31 columns. Anomaly detection is a crucial task in the realm of fraud prevention, where the goal is to identify unusual or unexpected patterns that deviate from the norm.
 
 ## Table of Contents
 - [Introduction](#introduction)
 - [Data](#data)
 - [Anomaly Detection Algorithms](#anomaly-detection-algorithms)
 - [Results](#results)
+- [Observations and Analysis](#observations-and-analysis)
 - [Usage](#usage)
 - [Dependencies](#dependencies)
 - [Acknowledgments](#acknowledgments)
@@ -17,7 +18,7 @@ Credit card fraud is a significant concern for financial institutions and custom
 
 ## Data
 
-The dataset used in this project contains over 28,000 rows and 31 columns, representing various features extracted from credit card transactions. Each row represents a transaction, and the columns contain information such as transaction amount, time, and other relevant features.
+The dataset used in this project contains over 280,000 rows and 31 columns, representing various features extracted from credit card transactions. Each row represents a transaction, and the columns contain information such as transaction amount, time, and other relevant features.
 
 ## Anomaly Detection Algorithms
 
@@ -65,6 +66,22 @@ Classfication Report:
 weighted avg       1.00      0.98      0.99    284807
 ```
 
+## Observations and Analysis
+
+The performance of Isolation Forest and Local Outlier Factor on the credit card fraud dataset can be summarized as follows:
+
+**Isolation Forest:**
+- Identified 675 instances as anomalies.
+- Achieved an accuracy of approximately 99.76%.
+- Showed better precision, recall, and F1-score for detecting fraudulent transactions compared to LOF.
+
+**Local Outlier Factor (LOF):**
+- Identified 4600 instances as anomalies.
+- Achieved an accuracy of approximately 98.38%.
+- Demonstrated low precision, recall, and F1-score for detecting fraudulent transactions.
+
+Both algorithms struggled with the class imbalance in the dataset, but Isolation Forest outperformed LOF in most evaluation metrics.
+
 ## Usage
 
 1. Clone this repository to your local machine.
@@ -88,3 +105,5 @@ pip install pandas scikit-learn
 ## Acknowledgments
 
 The dataset used in this project is sourced from [Kaggle](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud). Special thanks to the open-source community for providing valuable resources and algorithms for anomaly detection.
+
+Feel free to customize this README section according to your project's specific details and outcomes.
