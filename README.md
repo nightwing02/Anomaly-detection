@@ -105,5 +105,3 @@ pip install pandas scikit-learn
 ## Acknowledgments
 
 The dataset used in this project is sourced from [Kaggle](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud). Special thanks to the open-source community for providing valuable resources and algorithms for anomaly detection.
-
-Feel free to customize this README section according to your project's specific details and outcomes.
